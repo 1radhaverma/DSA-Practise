@@ -17,8 +17,6 @@
 using System;
 using System.Collections.Generic;
 
-using System;
-using System.Collections.Generic;
 
 class Solution
 {
@@ -248,6 +246,6 @@ class Program
 
         int[] res = sol.TwoSumIndices(arr, target);
         Console.WriteLine($"[{res[0]}, {res[1]}]");
-    }
+    } 
 }
 //tc - O(n log n)  Space Complexity - O(n)
