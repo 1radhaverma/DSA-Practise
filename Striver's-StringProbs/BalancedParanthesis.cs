@@ -4,28 +4,27 @@ using System.Collections.Generic;
 
 class Solution
 {
-    // Function to check if the input string has valid parentheses
     public bool IsValid(string s)
     {
-        Stack<char> st = new Stack<char>();  // Stack to store opening brackets
+        Stack<char> st = new Stack<char>();
 
-        foreach (char it in s)
+        foreach (char C in s)
         {
-            if (it == '(' || it == '{' || it == '[')
+            if (C == '(' || C == '{' || C == '[')
             {
-                st.Push(it);  // Push opening brackets
+                st.Push(C);
             }
             else
             {
-                if (st.Count == 0) return false;  // No matching opening bracket
+                if (st.Count == 0) return false;
 
                 char ch = st.Peek();
                 st.Pop();
 
                 // Check for matching pair
-                if ((it == ')' && ch == '(') ||
-                    (it == ']' && ch == '[') ||
-                    (it == '}' && ch == '{'))
+                if ((C == ')' && ch == '(') ||
+                    (C == ']' && ch == '[') ||
+                    (C == '}' && ch == '{'))
                 {
                     continue;
                 }
@@ -36,7 +35,7 @@ class Solution
             }
         }
 
-        return st.Count == 0;  // True if all brackets matched
+        return st.Count == 0; 
     }
 }
 
